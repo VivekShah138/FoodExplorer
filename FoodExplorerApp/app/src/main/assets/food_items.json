@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "name": "Pizza Margherita",
+    "imageUrl": "https://foodish-api.com/images/pizza/pizza5.jpg",
+    "description": "A timeless Italian classic, Pizza Margherita features a thin crust topped with tangy tomato sauce, fresh mozzarella cheese, and aromatic basil leaves. Baked to perfection, it offers a harmonious blend of flavors that celebrate the simplicity of traditional Neapolitan cuisine.",
+    "rating": 4.3,
+    "price": 8.99
+  },
+  {
+    "id": 2,
+    "name": "Chicken Biryani",
+    "imageUrl": "https://foodish-api.com/images/biryani/biryani8.jpg",
+    "description": "Chicken Biryani is a fragrant rice dish layered with succulent chicken marinated in a blend of spices. Cooked using the 'dum' method, it combines aromatic basmati rice, saffron, and caramelized onions to create a rich and flavorful meal.",
+    "rating": 4.9,
+    "price": 12.50
+  },
+  {
+    "id": 3,
+    "name": "Veg Burger",
+    "imageUrl": "https://foodish-api.com/images/burger/burger3.jpg",
+    "description": "This Veg Burger features a grilled vegetable patty made from a mix of legumes and spices, topped with fresh lettuce and tomato. Served in a toasted bun, it's a satisfying and wholesome vegetarian option.",
+    "rating": 3.2,
+    "price": 6.00
+  },
+  {
+    "id": 4,
+    "name": "Pasta Alfredo",
+    "imageUrl": "https://foodish-api.com/images/pasta/pasta24.jpg",
+    "description": "Pasta Alfredo is a creamy Italian dish made with fettuccine tossed in a rich white sauce of butter, cream, and Parmesan cheese. Often enhanced with mushrooms, it offers a luxurious and comforting dining experience.",
+    "rating": 4.7,
+    "price": 9.75
+  },
+  {
+    "id": 5,
+    "name": "Butter Chicken",
+    "imageUrl": "https://foodish-api.com/images/butter-chicken/butter-chicken7.jpg",
+    "description": "Butter Chicken is a North Indian favorite featuring tender chicken pieces simmered in a creamy tomato-based gravy enriched with butter and aromatic spices. It's best enjoyed with naan or steamed rice.",
+    "rating": 5.0,
+    "price": 11.25
+  },
+  {
+    "id": 6,
+    "name": "Plain Dosa",
+    "imageUrl": "https://foodish-api.com/images/dosa/dosa15.jpg",
+    "description": "Plain Dosa is a thin, crispy crepe made from a fermented batter of rice and lentils. Light and savory, it's often served with coconut chutney and sambar, making it a popular South Indian breakfast choice.",
+    "rating": 4.5,
+    "price": 4.50
+  },
+  {
+    "id": 7,
+    "name": "Rice and Curry",
+    "imageUrl": "https://foodish-api.com/images/rice/rice10.jpg",
+    "description": "A staple in South Asian cuisine, Rice and Curry features steamed rice accompanied by a variety of spicy curries made from vegetables, meats, or lentils. It's a hearty and flavorful meal enjoyed across the region.",
+    "rating": 3.3,
+    "price": 7.80
+  },
+  {
+    "id": 8,
+    "name": "Chocolate Dessert",
+    "imageUrl": "https://foodish-api.com/images/dessert/dessert5.jpg",
+    "description": "This layered chocolate dessert combines rich chocolate mousse, moist cake, and creamy ganache to create a decadent treat. It's a perfect choice for chocolate lovers seeking an indulgent and satisfying sweet.",
+    "rating": 4.6,
+    "price": 5.50
+  },
+  {
+    "id": 9,
+    "name": "Idli Sambar",
+    "imageUrl": "https://foodish-api.com/images/idly/idly1.jpg",
+    "description": "Idli Sambar is a traditional South Indian breakfast dish featuring soft, steamed rice cakes served with a spicy lentil soup called sambar. It's a light yet flavorful meal often accompanied by coconut chutney.",
+    "rating": 4.9,
+    "price": 4.75
+  },
+  {
+    "id": 10,
+    "name": "Samosa",
+    "imageUrl": "https://foodish-api.com/images/samosa/samosa6.jpg",
+    "description": "Samosa is a popular Indian snack consisting of a crispy pastry shell filled with spiced potatoes and peas. Deep-fried to golden perfection, it's commonly served with tangy tamarind or mint chutney.",
+    "rating": 3.0,
+    "price": 2.50
+  },
+  {
+    "id": 11,
+    "name": "Cheese Pizza",
+    "imageUrl": "https://foodish-api.com/images/pizza/pizza9.jpg",
+    "description": "Cheese Pizza features a classic combination of a crispy crust topped with rich tomato sauce and a generous layer of melted mozzarella cheese. It's a universally loved dish known for its simplicity and deliciousness.",
+    "rating": 5.0,
+    "price": 7.99
+  },
+  {
+    "id": 12,
+    "name": "Mutton Biryani",
+    "imageUrl": "https://foodish-api.com/images/biryani/biryani15.jpg",
+    "description": "Mutton Biryani is a flavorful rice dish made by layering tender mutton pieces with aromatic basmati rice, spices, and fried onions. Cooked slowly, it results in a rich and hearty meal.",
+    "rating": 4.0,
+    "price": 14.00
+  },
+  {
+    "id": 13,
+    "name": "Spicy Chicken Burger",
+    "imageUrl": "https://foodish-api.com/images/burger/burger8.jpg",
+    "description": "This Spicy Chicken Burger features a juicy chicken patty seasoned with bold spices, topped with fresh lettuce and creamy sauce, all nestled in a toasted bun. It's a fiery twist on a classic favorite.",
+    "rating": 3.0,
+    "price": 6.75
+  },
+  {
+    "id": 14,
+    "name": "Pasta Penne",
+    "imageUrl": "https://foodish-api.com/images/pasta/pasta12.jpg",
+    "description": "Pasta Penne is a hearty Italian dish featuring penne pasta tossed in a tangy tomato sauce enriched with garlic and herbs. It's a comforting meal that's both simple and satisfying.",
+    "rating": 2.5,
+    "price": 8.50
+  },
+  {
+    "id": 15,
+    "name": "Butter Chicken With Tandoor",
+    "imageUrl": "https://foodish-api.com/images/butter-chicken/butter-chicken3.jpg",
+    "description": "This variation of Butter Chicken includes tandoor-cooked chicken pieces simmered in a creamy tomato gravy. The smoky flavor from the tandoor adds depth to this rich and aromatic dish.",
+    "rating": 3.3,
+    "price": 12.75
+  },
+  {
+    "id": 16,
+    "name": "Masala Dosa",
+    "imageUrl": "https://foodish-api.com/images/dosa/dosa1.jpg",
+    "description": "Masala Dosa is a South Indian delicacy featuring a crispy rice and lentil crepe filled with a spiced potato mixture. Served with chutneys and sambar, it's a flavorful and satisfying meal.",
+    "rating": 2.1,
+    "price": 5.00
+  },
+  {
+    "id": 17,
+    "name": "Masala Rice",
+    "imageUrl": "https://foodish-api.com/images/rice/rice20.jpg",
+    "description": "Masala Rice is a spiced rice dish made by sautéing cooked basmati rice with aromatic spices, vegetables, and herbs. It's a quick and flavorful meal option that's both hearty and delicious.",
+    "rating": 4.2,
+    "price": 6.50
+  },
+  {
+    "id": 18,
+    "name": "Cup Cakes",
+    "imageUrl": "https://foodish-api.com/images/dessert/dessert9.jpg",
+    "description": "These Cup Cakes are soft and fluffy mini cakes topped with a hint of sweetness. Perfect for parties or as a sweet treat, they come in various flavors to suit every palate.",
+    "rating": 3.2,
+    "price": 3.25
+  },
+  {
+    "id": 19,
+    "name": "Mini Idlis",
+    "imageUrl": "https://foodish-api.com/images/idly/idly4.jpg",
+    "description": "Mini Idlis are bite-sized steamed rice cakes served in a bowl of flavorful sambar. They're a popular South Indian snack or breakfast item, loved for their soft texture and savory taste.",
+    "rating": 4.9,
+    "price": 4.25
+  },
+  {
+    "id": 20,
+    "name": "Punjabi Samosa",
+    "imageUrl": "https://foodish-api.com/images/samosa/samosa3.jpg",
+    "description": "Punjabi Samosa is a North Indian snack featuring a crispy pastry filled with a spiced mixture of potatoes and peas. Deep-fried to golden perfection, it's often enjoyed with chutneys.",
+    "rating": 5.0,
+    "price": 2.75
+  },
+  {
+    "id": 21,
+    "name": "Pepperoni Pizza",
+    "imageUrl": "https://foodish-api.com/images/pizza/pizza12.jpg",
+    "description": "Pepperoni Pizza is a classic favorite topped with spicy pepperoni slices over melted mozzarella and tangy tomato sauce. Baked to perfection, it offers a delightful combination of flavors and textures.",
+    "rating": 5.0,
+    "price": 9.50
+  },
+  {
+    "id": 22,
+    "name": "Veg Biryani",
+    "imageUrl": "https://foodish-api.com/images/biryani/biryani4.jpg",
+    "description": "Veg Biryani is a vibrant and aromatic rice dish made with mixed vegetables, basmati rice, and a blend of spices. It's a wholesome vegetarian option that's rich in flavor and color.",
+    "rating": 4.0,
+    "price": 10.00
+  },
+  {
+    "id": 23,
+    "name": "Aloo Tikki Burger",
+    "imageUrl": "https://foodish-api.com/images/burger/burger6.jpg",
+    "description": "Aloo Tikki Burger is an Indian-style burger featuring a crispy potato patty seasoned with spices, served in a bun with fresh vegetables and sauces. It's a popular street food delight.",
+    "rating": 3.3,
+    "price": 7.50
+  },
+  {
+    "id": 24,
+    "name": "Red Sauce Pasta",
+    "imageUrl": "https://foodish-api.com/images/pasta/pasta20.jpg",
+    "description": "Red Sauce Pasta is a rich and creamy dish made with pasta tossed in a tomato-based sauce infused with herbs and spices. It's a comforting meal that's both hearty and flavorful.",
+    "rating": 4.0,
+    "price": 9.00
+  },
+  {
+    "id": 25,
+    "name": "Butter Chicken Rice Bowl",
+    "imageUrl": "https://foodish-api.com/images/butter-chicken/butter-chicken8.jpg",
+    "description": "Butter Chicken Rice Bowl combines tender pieces of butter chicken served over a bed of steamed rice. It's a convenient and satisfying meal that brings together rich flavors in a single bowl.",
+    "rating": 5.0,
+    "price": 12.50
+  },
+  {
+    "id": 26,
+    "name": "Rava Dosa",
+    "imageUrl": "https://foodish-api.com/images/dosa/dosa25.jpg",
+    "description": "Rava Dosa is a crispy and thin South Indian crepe made from semolina (rava), rice flour, and spices. Known for its crunchy texture, it's typically served with chutneys and sambar.",
+    "rating": 4.1,
+    "price": 6.75
+  },
+  {
+    "id": 27,
+    "name": "Fried Rice",
+    "imageUrl": "https://foodish-api.com/images/rice/rice5.jpg",
+    "description": "Fried Rice is a quick and easy dish where cooked rice is stir-fried with vegetables, eggs, and soy sauce. It's a flavorful and versatile meal loved worldwide.",
+    "rating": 4.3,
+    "price": 8.00
+  },
+  {
+    "id": 28,
+    "name": "Chocolate Brownie",
+    "imageUrl": "https://foodish-api.com/images/dessert/dessert2.jpg",
+    "description": "Chocolate Brownie is a dense and fudgy baked dessert made with rich cocoa powder and chocolate chunks. Often served warm with ice cream, it's a decadent treat for chocolate lovers.",
+    "rating": 5.0,
+    "price": 5.50
+  },
+  {
+    "id": 29,
+    "name": "Medu Vada",
+    "imageUrl": "https://foodish-api.com/images/idly/idly5.jpg",
+    "description": "Medu Vada is a savory South Indian doughnut-shaped fritter made from urad dal batter, deep-fried to crispy perfection. Served with coconut chutney and sambar, it's a popular breakfast or snack item.",
+    "rating": 4.1,
+    "price": 4.75
+  },
+  {
+    "id": 30,
+    "name": "Aloo Samosa",
+    "imageUrl": "https://foodish-api.com/images/samosa/samosa2.jpg",
+    "description": "Aloo Samosa is a classic Indian snack consisting of a crispy fried pastry filled with a spicy potato mixture. It's a beloved street food often paired with tangy chutneys.",
+    "rating": 2.9,
+    "price": 3.50
+  }
+]
