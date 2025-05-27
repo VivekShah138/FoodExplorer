@@ -26,7 +26,7 @@ class FoodItemLocalLocalRepositoryImpl @Inject constructor(
         foodItemList.forEach { foodItem ->
 
             if(!foodItemDao.doesItemExists(foodItem.id)){
-                foodItemDao.insertItemList(foodItem.toEntity())
+                foodItemDao.insertItem(foodItem.toEntity())
             }
         }
     }
@@ -60,6 +60,6 @@ class FoodItemLocalLocalRepositoryImpl @Inject constructor(
     }
 
     override suspend fun insertFoodItem(foodItem: FoodItem) = withContext(Dispatchers.IO) {
-        foodItemDao.insertItemList(items = foodItem.toEntity())
+        foodItemDao.insertItem(items = foodItem.toEntity())
     }
 }

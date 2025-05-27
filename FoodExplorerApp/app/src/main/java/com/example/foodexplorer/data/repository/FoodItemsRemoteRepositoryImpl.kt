@@ -15,14 +15,13 @@ class FoodItemsRemoteRepositoryImpl(
     override suspend fun getFoodItems(): Resource<List<FoodItem>>  = withContext(Dispatchers.IO) {
         try {
             val response = foodItemsApi.getFoodItems()
-            Log.d("FoodItemsApi","Items : $response")
             Resource.Success(response)
         }catch (e: IOException) {
             Log.d("FoodItemsApi", "Network error: ${e.localizedMessage}")
             Resource.Error("Please check your internet connection.")
         }  catch (e: Exception) {
             Log.d("FoodItemsApi", "Cannot Retrieve Food Items ${e.localizedMessage}")
-            Resource.Error("An unexpected error occurred")
+            Resource.Error("An unexpected error occurred.")
         }
     }
 }

@@ -19,7 +19,7 @@ interface FoodItemDao {
     suspend fun getFoodItemById(itemId:Int) : FoodItemEntity
 
     @Upsert
-    suspend fun insertItemList(items: FoodItemEntity)
+    suspend fun insertItem(items: FoodItemEntity)
 
     @Query("UPDATE FoodItemEntity SET isFavourite = :isFav WHERE itemId = :id")
     suspend fun updateFavoriteItem(id: Int, isFav: Boolean)

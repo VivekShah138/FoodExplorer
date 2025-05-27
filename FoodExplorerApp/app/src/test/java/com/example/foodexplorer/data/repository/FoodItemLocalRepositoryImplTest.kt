@@ -8,8 +8,6 @@ import io.mockk.coVerify
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.test.runTest
-
-import org.junit.After
 import org.junit.Before
 import org.junit.Test
 
@@ -26,17 +24,12 @@ class FoodItemLocalRepositoryImplTest {
         repository = FoodItemLocalLocalRepositoryImpl(context,foodItemDao)
     }
 
-    @After
-    fun tearDown(){
-
-    }
-
     @Test
-    fun `insertFoodItemsFromAssets inserts items that do not exist`() = runTest {
+    fun `insert food items from assets inserts items that do not exist`() = runTest {
         val jsonString = """
         [
           {
-            "itemId": 1,
+            "id": 1,
             "name": "Pizza Margherita",
             "imageUrl": "https://foodish-api.com/images/pizza/pizza5.jpg",
             "description": "A timeless Italian classic, Pizza Margherita features a thin crust topped with tangy tomato sauce, fresh mozzarella cheese, and aromatic basil leaves.",
@@ -52,11 +45,39 @@ class FoodItemLocalRepositoryImplTest {
         every { assetManager.open("food_items.json") } returns jsonString.byteInputStream()
 
         coEvery { foodItemDao.doesItemExists(1) } returns false
-        coEvery { foodItemDao.insertItemList(any()) } returns Unit
 
         repository.insertFoodItemsFromAssets()
 
         coVerify(exactly = 1) { foodItemDao.doesItemExists(1) }
-        coVerify(exactly = 1) { foodItemDao.insertItemList(match { it.itemId == 1 }) }
+        coVerify(exactly = 1) { foodItemDao.insertItem(match { it.itemId == 1 }) }
+    }
+
+    @Test
+    fun `insert food items from assets inserts items that do exist`() = runTest {
+        val jsonString = """
+        [
+          {
+            "id": 1,
+            "name": "Pizza Margherita",
+            "imageUrl": "https://foodish-api.com/images/pizza/pizza5.jpg",
+            "description": "A timeless Italian classic, Pizza Margherita features a thin crust topped with tangy tomato sauce, fresh mozzarella cheese, and aromatic basil leaves.",
+            "rating": 4,
+            "price": 8.99
+          }
+        ]
+    """.trimIndent()
+
+
+        // Mock AssetManager
+        val assetManager = mockk<android.content.res.AssetManager>(relaxed = true)
+        every { context.assets } returns assetManager
+        every { assetManager.open("food_items.json") } returns jsonString.byteInputStream()
+
+        coEvery { foodItemDao.doesItemExists(1) } returns true
+
+        repository.insertFoodItemsFromAssets()
+
+        coVerify(exactly = 1) { foodItemDao.doesItemExists(1) }
+        coVerify(exactly = 0) { foodItemDao.insertItem(any()) }
     }
 }

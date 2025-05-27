@@ -40,7 +40,7 @@ class FoodItemDaoTest {
     }
 
     @Test
-    fun insertItemList() = runTest {
+    fun insertItem() = runTest {
         val foodItemEntity1 = FoodItem(
             id = 1,
             name = "Pizza Margherita",
@@ -69,7 +69,7 @@ class FoodItemDaoTest {
             imageUrl = "https://foodish-api.com/images/pizza/pizza5.jpg"
         )
 
-        foodItemDao.insertItemList(foodItemEntity1)
+        foodItemDao.insertItem(foodItemEntity1)
 
         val allFoodItems = foodItemDao.getAllItems().first()
 
@@ -110,7 +110,7 @@ class FoodItemDaoTest {
         val listOfAllItems = listOf(foodItemEntity1,foodItemEntity2,foodItemEntity3)
 
         listOfAllItems.forEach {
-            foodItemDao.insertItemList(it)
+            foodItemDao.insertItem(it)
         }
 
         val listOfAllItemsRetrieved = foodItemDao.getAllItems().first()
@@ -151,7 +151,7 @@ class FoodItemDaoTest {
         val listOfAllItems = listOf(foodItemEntity1,foodItemEntity2,foodItemEntity3)
 
         listOfAllItems.forEach {
-            foodItemDao.insertItemList(it)
+            foodItemDao.insertItem(it)
         }
 
         val listOfAllFavItemsRetrieved = foodItemDao.getAllFavouriteItems().first()
@@ -192,7 +192,7 @@ class FoodItemDaoTest {
         val listOfAllItems = listOf(foodItemEntity1,foodItemEntity2,foodItemEntity3)
 
         listOfAllItems.forEach {
-            foodItemDao.insertItemList(it)
+            foodItemDao.insertItem(it)
         }
 
         foodItemDao.updateFavoriteItem(id = 3, isFav = true)
@@ -236,7 +236,7 @@ class FoodItemDaoTest {
         val listOfAllItems = listOf(foodItemEntity1,foodItemEntity2,foodItemEntity3)
 
         listOfAllItems.forEach {
-            foodItemDao.insertItemList(it)
+            foodItemDao.insertItem(it)
         }
 
         foodItemDao.updateFavoriteItem(id = 2, isFav = false)
@@ -297,7 +297,7 @@ class FoodItemDaoTest {
         val listOfAllItems = listOf(foodItemEntity1,foodItemEntity3,foodItemEntity5)
 
         listOfAllItems.forEach {
-            foodItemDao.insertItemList(it)
+            foodItemDao.insertItem(it)
         }
 
         val listOfAllItems2 = listOf(foodItemEntity1,foodItemEntity2,foodItemEntity3,foodItemEntity4,foodItemEntity5)
@@ -305,7 +305,7 @@ class FoodItemDaoTest {
         listOfAllItems2.forEach {
             val doesExists = foodItemDao.doesItemExists(it.itemId)
             if(!doesExists){
-                foodItemDao.insertItemList(it)
+                foodItemDao.insertItem(it)
             }
         }
 
