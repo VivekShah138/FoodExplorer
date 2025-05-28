@@ -8,6 +8,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -43,12 +44,6 @@ class AllFoodItemsViewModel @Inject constructor(
                     }
                 }
             }
-            is AllFoodItemsEvents.InsertFoodItems -> {
-                viewModelScope.launch {
-                    foodItemsUseCaseWrapper.insertFoodItemsFromAssets()
-                }
-            }
-
             is AllFoodItemsEvents.UpdateFavState -> {
                 viewModelScope.launch{
                     foodItemsUseCaseWrapper.updateFavFlag(itemId = allFoodItemsEvents.itemId, isFav = allFoodItemsEvents.isFav)
@@ -75,10 +70,19 @@ class AllFoodItemsViewModel @Inject constructor(
                     }
                 }
                 is Resource.Error -> {
-                    _allFoodItemsState.value = _allFoodItemsState.value.copy(
-                        isListLoading = false,
-                        isError = result.message
-                    )
+                    val databaseResponse = foodItemsUseCaseWrapper.getAllFoodItems().first()
+                    if(databaseResponse.isEmpty()){
+                        _allFoodItemsState.value = _allFoodItemsState.value.copy(
+                            isListLoading = false,
+                            isError = result.message
+                        )
+                    }
+                    else{
+                        _allFoodItemsState.value = _allFoodItemsState.value.copy(
+                            isListLoading = false,
+                            allFoodItemsList = databaseResponse
+                        )
+                    }
                 }
             }
         }

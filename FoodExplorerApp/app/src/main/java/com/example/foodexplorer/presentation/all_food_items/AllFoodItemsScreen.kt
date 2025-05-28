@@ -43,12 +43,9 @@ fun AllFoodItemScreen(
     navController: NavController,
     state: AllFoodItemsState,
     onEvent: (AllFoodItemsEvents) -> Unit
-){
+) {
 
-    val focusRequester = remember { FocusRequester() }
-    val interactionSource = remember { MutableInteractionSource() }
-    val isFocused by interactionSource.collectIsFocusedAsState()
-    val focusManager = LocalFocusManager.current
+
     val swipeRefreshState = rememberPullRefreshState(
         refreshing = state.isListLoading,
         onRefresh = {
@@ -66,83 +63,75 @@ fun AllFoodItemScreen(
         bottomBar = {
             BottomNavigationBar(navController = navController)
         }
-    ) {paddingValues ->
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(paddingValues)
-                    .pullRefresh(swipeRefreshState)
-            ){
-                if(!state.isError.isNullOrEmpty()){
+    ) { paddingValues ->
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .pullRefresh(swipeRefreshState)
+        ) {
+            if (!state.isError.isNullOrEmpty()) {
 
-                    Column(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .verticalScroll(rememberScrollState())
-                            .padding(16.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.Center
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .verticalScroll(rememberScrollState())
+                        .padding(16.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    Text(
+                        text = state.isError,
+                        style = MaterialTheme.typography.titleMedium,
+                    )
+                    TextButton(
+                        onClick = {
+                            onEvent(AllFoodItemsEvents.LoadAllFoodItemsFromDb)
+                        }
                     ) {
                         Text(
-                            text = state.isError,
+                            text = "Load List From Assets",
                             style = MaterialTheme.typography.titleMedium,
                         )
-                        TextButton(
-                            onClick = {
-                                onEvent(AllFoodItemsEvents.LoadAllFoodItemsFromDb)
-                            }
-                        ) {
-                            Text(
-                                text = "Load List From Assets",
-                                style = MaterialTheme.typography.titleMedium,
+                    }
+                }
+
+            } else {
+                LazyColumn() {
+                    items(state.allFoodItemsList){ foodItems ->
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .padding(horizontal = 16.dp, vertical = 8.dp)
+                        ){
+                            FoodItemCard(
+                                item = foodItems,
+                                onItemClick = {
+                                    navController.navigate("${Screens.FoodItemDetailsScreen.routes}/${foodItems.id}")
+                                },
+                                onFavClick = {
+                                    onEvent(AllFoodItemsEvents.UpdateFavState(itemId = foodItems.id,isFav = !it))
+                                }
                             )
                         }
-                    }
-
-                }
-                else{
-                    if(!isFocused){
-                        LazyColumn(
-
-                        ) {
-                            items(state.allFoodItemsList){ foodItems ->
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxSize()
-                                        .padding(horizontal = 16.dp, vertical = 8.dp)
-                                ){
-                                    FoodItemCard(
-                                        item = foodItems,
-                                        onItemClick = {
-                                            navController.navigate("${Screens.FoodItemDetailsScreen.routes}/${foodItems.id}")
-                                        },
-                                        onFavClick = {
-                                            onEvent(AllFoodItemsEvents.UpdateFavState(itemId = foodItems.id,isFav = !it))
-                                        }
-                                    )
-                                }
-
-                            }
-                        }
-                    }
-                    else{
 
                     }
                 }
-
-                PullRefreshIndicator(
-                    refreshing = state.isListLoading,
-                    state = swipeRefreshState,
-                    modifier = Modifier.align(Alignment.TopCenter)
-                )
             }
+
+            PullRefreshIndicator(
+                refreshing = state.isListLoading,
+                state = swipeRefreshState,
+                modifier = Modifier.align(Alignment.TopCenter)
+            )
+        }
     }
 }
 
 
 @Preview
 @Composable
-fun AllFoodItemsScreenPreview(){
+fun AllFoodItemsScreenPreview() {
     FoodExplorerTheme {
         AllFoodItemScreen(
             navController = rememberNavController(),

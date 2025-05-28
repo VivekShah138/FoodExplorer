@@ -34,7 +34,7 @@ Food Explorer is an Android app that demonstrates the use of **MVVM** and **Clea
 
 ## Screens
 
-- **All Items Screen:** Displays all food items with image, name, description, rate, and rating. Each item has a favorite icon to toggle favorite status.
+- **All Items Screen:** Displays all food items with image, name, description, rate, and rating. Each item has a favorite icon to add/remove from favorites.
 - **Favorite Items Screen:** Shows only the user's favorite items in the same card format.
 - **Detail Item Screen:** Shows detailed information about the selected food item with a back button and toggle to add/remove from favorites.
 
@@ -60,13 +60,6 @@ Food Explorer is an Android app that demonstrates the use of **MVVM** and **Clea
 3. On first launch, the app will fetch data from the API and populate the local database.
 4. Use the navigation drawer or bottom navigation to explore all items and favorites.
 5. Toggle favorites on the list or detail screens.
-
----
-
-## Notes
-
-- The app handles offline scenarios gracefully by allowing data to be loaded from local JSON assets.
-- Designed for clean, modular, and testable code using modern Android best practices.
 
 ---
 
