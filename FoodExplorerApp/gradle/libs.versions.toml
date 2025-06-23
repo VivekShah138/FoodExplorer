@@ -15,7 +15,7 @@ hiltCompiler = "1.2.0"
 composeNavigation = "2.9.0"
 roomVersion = "2.7.1"
 serialization = "1.7.3"
-kotlinxCoroutinesAndroid = "1.7.3"
+kotlinxCoroutinesAndroid = "1.9.0"
 retrofit = "2.9.0"
 converterGson = "2.9.0"
 media3CommonKtx = "1.7.1"
@@ -76,4 +76,7 @@ hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
 
 #Room
 google-devtools-ksp = {id = "com.google.devtools.ksp", version.ref = "kspVersion"}
+
+#Serializable
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 

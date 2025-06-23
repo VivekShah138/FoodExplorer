@@ -40,6 +40,7 @@ import com.example.foodexplorer.presentation.core.components.AppTopBar
 import com.example.foodexplorer.presentation.core.components.CustomSwitch
 import com.example.foodexplorer.ui.theme.FoodExplorerTheme
 import com.example.foodexplorer.ui.theme.StarColor
+import kotlinx.coroutines.flow.MutableStateFlow
 
 @Composable
 fun SingleFoodItemScreen(

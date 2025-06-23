@@ -7,7 +7,7 @@ import com.google.gson.reflect.TypeToken
 object FoodItemJsonParser {
 
     fun parseJsonToFoodItems(jsonString: String): List<FoodItem> {
-        val listType = object : TypeToken<List<FoodItem>>() {}.type
+        val listType = object : TypeToken<List<FoodItem>>(){}.type
         return Gson().fromJson(jsonString, listType)
     }
 

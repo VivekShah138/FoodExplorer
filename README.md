@@ -63,4 +63,8 @@ Food Explorer is an Android app that demonstrates the use of **MVVM** and **Clea
 
 ---
 
+## Demo
+![Demo video](Media/Demo_Video-ezgif.com-video-to-gif-converter.gif)
+
+
 Feel free to explore the code to see MVVM and Clean Architecture in action!
